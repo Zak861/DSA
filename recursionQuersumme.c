@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int quersumme(int *Zahl){
+int quersumme(int Zahl){
     if(Zahl < 10){
-        return *Zahl;
+        return Zahl;
     }
     else{
-        return (*Zahl%10) + (quersumme(*Zahl/10));
+        return (Zahl%10) + (quersumme(Zahl/10));
     }
 }
 int main(){
